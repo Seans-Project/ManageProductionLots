@@ -91,6 +91,8 @@
 							formatter: '.formatter.currencyValue'
 						}"
 						numberUnit="{WeightTotal}">
+						<ObjectAttribute title="Lot Origin" text="{Art}" />
+						<ObjectAttribute title="Order Number" text="{Aufpl}" />
 					</ObjectListItem>
 				</items>
 			</List>
