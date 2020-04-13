@@ -79,7 +79,88 @@ sap.ui.define([
 		/* =========================================================== */
 		/* event handlers                                              */
 		/* =========================================================== */
+		
+		
+		// Filter Inspection Lots by Plant Number
+		onFilterPlant : function (oEvent) {
 
+			// Build filter array
+			var aFilter = [];
+			var sQuery = oEvent.getParameter("query");
+			if (sQuery) {
+				aFilter.push(new Filter("Werk", FilterOperator.Contains, sQuery));
+			}
+
+			// filter binding
+			var oList = this.getView().byId("list");
+			var oBinding = oList.getBinding("items");
+			oBinding.filter(aFilter);
+		},
+		
+		// Filter Inspection Lots by Material
+		onFilterMaterial : function (oEvent) {
+
+			// Build filter array
+			var aFilter = [];
+			var sQuery = oEvent.getParameter("query");
+			if (sQuery) {
+				aFilter.push(new Filter("Matnr", FilterOperator.Contains, sQuery));
+			}
+
+			// filter binding
+			var oList = this.getView().byId("list");
+			var oBinding = oList.getBinding("items");
+			oBinding.filter(aFilter);
+		},
+		
+		// Filter Inspection Lots by Batch Number
+		onFilterBatch : function (oEvent) {
+
+			// Build filter array
+			var aFilter = [];
+			var sQuery = oEvent.getParameter("query");
+			if (sQuery) {
+				aFilter.push(new Filter("Charg", FilterOperator.Contains, sQuery));
+			}
+
+			// filter binding
+			var oList = this.getView().byId("list");
+			var oBinding = oList.getBinding("items");
+			oBinding.filter(aFilter);
+		},
+		
+		// Filter Inspection Lots by Inspection Start Date
+		onFilterInspectionStartDate : function (oEvent) {
+
+			// Build filter array
+			var aFilter = [];
+			var sQuery = oEvent.getParameter("query");
+			if (sQuery) {
+				aFilter.push(new Filter("Pastrterm", FilterOperator.Contains, sQuery));
+			}
+
+			// filter binding
+			var oList = this.getView().byId("list");
+			var oBinding = oList.getBinding("items");
+			oBinding.filter(aFilter);
+		},
+		
+		// Filter Inspection Lots by Inspection End Date
+		onFilterInspectionEndDate : function (oEvent) {
+
+			// Build filter array
+			var aFilter = [];
+			var sQuery = oEvent.getParameter("query");
+			if (sQuery) {
+				aFilter.push(new Filter("Paendterm", FilterOperator.Contains, sQuery));
+			}
+
+			// filter binding
+			var oList = this.getView().byId("list");
+			var oBinding = oList.getBinding("items");
+			oBinding.filter(aFilter);
+		},
+		
 		/**
 		 * After list data is available, this handler method updates the
 		 * master list counter
