@@ -49,11 +49,72 @@
 				</infoToolbar>
 				<headerToolbar>
 					<OverflowToolbar>
+						<Title text="{i18n>Plant:}"/>
 						<SearchField
-							id="searchField"
+							id="plant"
 							showRefreshButton="true"
 							tooltip="{i18n>masterSearchTooltip}"
-							search=".onSearch"
+							search="onFilterPlant"
+							width="auto">
+							<layoutData>
+								<OverflowToolbarLayoutData
+									minWidth="150px"
+									maxWidth="240px"
+									shrinkable="true"
+									priority="NeverOverflow"/>
+							</layoutData>
+						</SearchField>
+						<Title text="{i18n>Material:}"/>
+						<SearchField
+							id="material"
+							showRefreshButton="true"
+							tooltip="{i18n>masterSearchTooltip}"
+							search="onFilterMaterial"
+							width="auto">
+							<layoutData>
+								<OverflowToolbarLayoutData
+									minWidth="150px"
+									maxWidth="240px"
+									shrinkable="true"
+									priority="NeverOverflow"/>
+							</layoutData>
+						</SearchField>
+						<Title text="{i18n>Batch:}"/>
+						<SearchField
+							id="batch"
+							showRefreshButton="true"
+							tooltip="{i18n>masterSearchTooltip}"
+							search="onFilterBatch"
+							width="auto">
+							<layoutData>
+								<OverflowToolbarLayoutData
+									minWidth="150px"
+									maxWidth="240px"
+									shrinkable="true"
+									priority="NeverOverflow"/>
+							</layoutData>
+						</SearchField>
+						<Title text="{i18n>Start Date:}"/>
+						<SearchField
+							id="startDate"
+							showRefreshButton="true"
+							tooltip="{i18n>masterSearchTooltip}"
+							search="onFilterInspectionStartDate"
+							width="auto">
+							<layoutData>
+								<OverflowToolbarLayoutData
+									minWidth="150px"
+									maxWidth="240px"
+									shrinkable="true"
+									priority="NeverOverflow"/>
+							</layoutData>
+						</SearchField>
+						<Title text="{i18n>End Date:}"/>
+						<SearchField
+							id="endDate"
+							showRefreshButton="true"
+							tooltip="{i18n>masterSearchTooltip}"
+							search="onFilterInspectionEndDate"
 							width="auto">
 							<layoutData>
 								<OverflowToolbarLayoutData
